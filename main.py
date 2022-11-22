@@ -6,9 +6,6 @@ import random
 
     
 
-if choix == 3:
-    print("les regles sont simples, tu te promene dans un dongeon, et tu combat des monstre. leur force est determiner par un nombre aleatoire entre 1 et 5, et tu devrai rouler un de pour le combattre")
-    choix = input("Que voulez-vous faire ? n1- Combattre cet adversaire, 2- Contourner cet adversaire et aller ouvrir une autre porte, 3- Afficher les règles du jeu, 4- Quitter la partie")
 
 running = True
 
