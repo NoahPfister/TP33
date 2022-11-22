@@ -1,9 +1,10 @@
 import random
 
-
+#Ici je debute le loop et je
 running = True
 niveau_vie = 20
 victoires = 0
+defaites = 00
 while running:
 
     niveau_adversaire = random.randint(0,5)
@@ -11,6 +12,7 @@ while running:
     print("Vous tombez face à face avec un adversaire de difficulté :", niveau_adversaire)
     choix = int(input(
         "Que voulez-vous faire ? 1- Combattre cet adversaire, 2- Contourner cet adversaire et aller ouvrir une autre porte, 3- Afficher les règles du jeu, 4- Quitter la partie"))
+
 
     if choix == 2:
         niveau_vie -= 1
@@ -26,6 +28,8 @@ while running:
 
         elif niveau_adversaire <= Attaque_joueur:
             niveau_vie += niveau_adversaire
+            victoires += 1
+            print("vous avez", victoires,"victoires")
             print("vous avez", niveau_vie, "vies")
 
     if choix == 3:
@@ -38,5 +42,8 @@ while running:
 
     if choix == 4:
         print("Merci et au revoir...")
+        running =False
 
-
+if niveau_vie <= 0:
+    running =False
+    print("vous etes mort")
